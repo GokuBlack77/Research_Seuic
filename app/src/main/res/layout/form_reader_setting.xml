@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="vertical">
+
+    <LinearLayout
+        android:padding="3dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_marginVertical="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioGroup
+                android:id="@+id/rbGroupMethod"
+                android:gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:button="@android:color/transparent"
+                    android:layout_weight="1"
+                    android:id="@+id/rbSignalR"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="3dp"
+                    android:paddingRight="16dp"
+                    android:paddingBottom="3dp"
+                    android:text="SignalR Client"
+                    android:textSize="11dp"
+                    android:gravity="center"
+                    android:checked="true"
+                    android:textStyle="bold"
+                    android:textColor="@color/radio_flat_text_selector"
+                    android:background="@drawable/radio_flat_selector"/>
+
+                <RadioButton
+                    android:textStyle="bold"
+                    android:button="@android:color/transparent"
+                    android:layout_weight="1"
+                    android:id="@+id/rbBluetooth"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="3dp"
+                    android:paddingRight="16dp"
+                    android:paddingBottom="3dp"
+                    android:text="Bluetooth"
+                    android:textSize="11dp"
+                    android:gravity="center"
+                    android:textColor="@color/radio_flat_text_selector"
+                    android:background="@drawable/radio_flat_selector"/>
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:paddingHorizontal="5dp"
+            android:paddingVertical="7dp"
+            android:id="@+id/llSignalR"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_border_layout_1">
+
+            <TextView
+                android:textSize="11dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="URL SignalR Server :"/>
+
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:paddingVertical="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    android:textSize="11dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="http://"/>
+
+                <EditText
+                    android:layout_weight="0.2"
+                    android:id="@+id/etIpAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="11dp"
+                    android:textColor="@android:color/black"
+                    android:hint="IP Address"
+                    android:inputType="number|text"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:paddingVertical="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    android:textSize="11dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Port"/>
+
+                <EditText
+                    android:layout_weight="0.2"
+                    android:id="@+id/etPort"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="11dp"
+                    android:textColor="@android:color/black"
+                    android:hint="Port"
+                    android:inputType="number"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llBluetooth"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/llSession"
+            android:padding="3dp"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:textSize="11dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Session :"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rbS0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="3dp"
+                        android:text="S0"
+                        android:textSize="11dp" />
+
+                    <RadioButton
+                        android:id="@+id/rbS1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="S1"
+                        android:textSize="11dp"
+                        android:layout_marginRight="3dp"/>
+
+                    <RadioButton
+                        android:id="@+id/rbS2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="S2"
+                        android:textSize="11dp"
+                        android:layout_marginRight="3dp"/>
+
+                    <RadioButton
+                        android:id="@+id/rbS3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="S3"
+                        android:textSize="11dp"
+                        android:layout_marginRight="3dp"/>
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:padding="3dp"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:textSize="11dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Region Frequency :"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:id="@+id/rbGroupRegFreq"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:layout_weight="1"
+                        android:id="@+id/rbReg0"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="3dp"
+                        android:text="North American"
+                        android:textSize="11dp" />
+
+                    <RadioButton
+                        android:layout_weight="1"
+                        android:id="@+id/rbReg1"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:text="Europe"
+                        android:textSize="11dp"
+                        android:layout_marginRight="3dp"/>
+
+                    <RadioButton
+                        android:layout_weight="1"
+                        android:id="@+id/rbReg2"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:text="China"
+                        android:textSize="11dp"
+                        android:layout_marginRight="3dp"/>
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvFreq"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="11dp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:text="Frequency : ?"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llRfTransmitter"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:textSize="11dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Power :"/>
+
+                <Spinner
+                    android:id="@+id/spinnerPower"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+<!--                <EditText-->
+<!--                    android:id="@+id/etTransmitPower"-->
+<!--                    android:layout_width="80dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="30"-->
+<!--                    android:textSize="11dp"-->
+<!--                    android:inputType="number"-->
+<!--                    android:textAlignment="center"/>-->
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/cbFilterRssi"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:textSize="11dp"
+            android:text="Filter RSSI"/>
+
+        <LinearLayout
+            android:layout_marginTop="3dp"
+            android:id="@+id/llFilterRssi"
+            android:layout_marginLeft="5dp"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btnMinus"
+                android:text="-"
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
+
+            <EditText
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:enabled="false"
+                android:id="@+id/etRssi"
+                android:textAlignment="center"
+                android:inputType="number"
+                android:textSize="12dp"
+                android:text="-40"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:id="@+id/btnPlus"
+                android:text="+"
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
